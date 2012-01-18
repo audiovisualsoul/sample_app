@@ -27,7 +27,8 @@ group :test do
   gem 'sqlite3', '1.3.4'
 end
 
-group :test do
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
   gem 'pg'
 end
 
