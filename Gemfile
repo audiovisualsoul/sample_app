@@ -19,11 +19,11 @@ gem 'jquery-rails'
 
 group :development do
   gem 'rspec-rails'
-  gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
   gem 'sqlite3', '1.3.4'
   gem 'rb-fsevent'
-end
+  gem 'annotate', '~> 2.4.1.beta' 
+  end
 
 group :test do
   gem 'rspec-rails'
