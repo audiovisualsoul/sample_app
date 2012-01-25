@@ -1,10 +1,11 @@
 <header>
-<div id="head" class="round"><div id="logo">
-<%= image_tag("tuneboatlogo.png", :alt => "Sample App", :class => "round") %></div><div id="brand"><h1><font color="#fff">Tuneboat</font></h1></div>
+<div id="head" class="round">
+<div id="logo"><%= link_to logo, root_path %></div>
+<div id="brand"><h1><font color="#fff"> Tuneboat </font> </h1> </div>
 <nav>
 <ul>
-<li><%= link_to "Home", @home %></li>
-<li><%= link_to "Help", '#' %></li>
+<li><%= link_to "Home", root_path %></li>
+<li><%= link_to "Help", help_path %></li>
 <li><%= link_to "Sign In", '#' %></li>
 </ul>
 </nav>

@@ -11,5 +11,9 @@ def title
 	end
 	end
 	
+def logo
+	image_tag("tuneboatlogo.png", :alt => "Tuneboat", :class => "round")
+end
+	
 	
 end
