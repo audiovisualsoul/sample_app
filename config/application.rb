@@ -42,7 +42,7 @@ module SampleApp
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
-    # Configure sensitive parameters which will be filtered from the log file.
+    # Configure sensitive parameters which will be filtered from the log file. Sean, you can put whatever you want stricken right in here.
     config.filter_parameters += [:password]
 
     # Enable the asset pipeline
