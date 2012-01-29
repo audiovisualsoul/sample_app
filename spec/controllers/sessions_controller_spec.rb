@@ -58,6 +58,7 @@ render_views
   				post :create, :session => @attr
   				response.should redirect_to(user_path(@user))
   			end
+  			
   		end
 	end
 end
