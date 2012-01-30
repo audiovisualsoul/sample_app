@@ -5,8 +5,6 @@ gem 'rails', '3.1.3'
 gem 'gravatar_image_tag', '1.0.0.pre2'
  gem "will_paginate"
 
-gem 'autotest'
-
 gem "sprockets"
 
 group :assets do
@@ -23,6 +21,7 @@ group :development do
   gem 'rspec-rails'
   gem 'faker', '0.3.1'
   gem 'sqlite3', '1.3.4'
+  gem 'autotest'
   gem 'rb-fsevent'
   gem 'annotate', '~> 2.4.1.beta' 
   end
@@ -32,6 +31,7 @@ group :test do
   gem 'webrat', '0.7.1'
   gem 'factory_girl_rails', '1.0'
   gem 'sqlite3', '1.3.4'
+  gem 'autotest'
   gem 'rb-fsevent'
 end
 
