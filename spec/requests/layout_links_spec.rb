@@ -43,9 +43,9 @@ describe "LayoutLinks" do
 	response.should have_selector('title', :content => "Contact")
 	end
 	
-	it "should have a working 'Sign up now!' button" do
+	it "should have a working Sign Up lander" do
 	visit root_path
-	click_link 'Sign up now!'
+	click_link "Sign up now!"
 	response.should have_selector('title', :content => "Sign Up")
 	end
 	
@@ -61,10 +61,7 @@ describe "LayoutLinks" do
     
     before(:each) do
       @user = Factory(:user)
-      visit signin_path
-      fill_in :email,    :with => @user.email
-      fill_in :password, :with => @user.password
-      click_button
+       integration_sign_in(@user)
     end
     
     it "should have a signout link" do

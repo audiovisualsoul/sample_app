@@ -1,15 +1,15 @@
 /*BASIC STYLES*/
 
-body{font: 13pt Helvetica-neue, sans-serif; color:#666;}
+body{font: 12pt Helvetica-neue, sans-serif; color:#666;}
 h1{font-size: 24pt; color:#333; padding:0px; margin:7px;}
-h2{font-size: 18pt; }
-h3{font-size: 16pt; color:#333;}
+h2{font-size: 16pt; }
+h3{font-size: 14pt; color:#333;}
 img{float:left;}
 
 /*SITE LAYOUT*/
 
 /*CONTAINER*/
-.container{margin-left:auto; margin-right:auto; width:70%; margin-top:50px; padding:0px;}
+.container{margin-left:auto; margin-right:auto; width:95%; height:95%; margin-top:auto; margin-bottom:auto; padding:0px;}
 
 /*SITE_COLUMNS*/
 .main_column{float:left; width:70%; padding:0px; margin-left:0; margin-right:0; margin-top: 5px; margin-bottom:5px;}
@@ -23,29 +23,40 @@ img{float:left;}
 /*SITE ELEMENTS*/
 
 /*HEADER ID ELEMENTS*/
-#head{position:relative; height:90px; 
+#head{position:relative; height:67px; 
 background:#333; border-color:#999; border-style:solid;
 border-width:thin;}
 #logo{position:absolute; left:8px;top:8px;}
-#brand{position:absolute; left:90px; top:23px;}
+#brand{position:absolute;  left:45px; top:13px;}
 #subtitle{clear:both; font-size:14pt bold; margin-left:60px; margin-bottom:20px;}
 
 /*CONTENT CONTAINER*/
-.content_container{padding:0px; margin:0px; position:relative;}
+.content_container{width:100%; height:100%; padding:0px; margin:0px; position:relative;}
 
 /*USER PROFILE*/
 .user_name{padding:0px; margin:0px; position:relative; left:10px; top:10px;}
 .profile_container{padding:0px; margin:0px; position:relative; width:100%}
 .profile_body{clear:both}
 
+
 /*NAVIGATION*/
-nav{color:#999; float:right; padding: 0 0.7em; white-space: nowrap;}
+nav{font-size:10pt; color:#999; float:right; padding: 0 0.7em; white-space: nowrap;}
 nav ul {margin:0; padding:0;}
-nav ul li {list-style-type:none; display:inline-block; padding: 0.2em 0;}
+nav ul li {list-style-type:none; margin-right:3px; display:inline-block; padding: 0.4em 0;}
 section{padding:5px;}
 
 /*FOOTER*/
-footer{text-align:center; margin-top: 30px; border-top-style:solid; border-width:2px; clear:both;}
+footer{position:fixed;
+width:95%;
+padding:3px;
+margin-left:auto;
+margin-right:auto;
+bottom:-10px;
+text-align:center;
+height:40px; 
+background:#333; border-color:#999; border-style:solid;
+border-width:thin;}
+
 
 /*LINKS*/
 a:link {color: #ccc; text-decoration: none; }
@@ -55,18 +66,33 @@ a:hover {color: #222; text-decoration: none; }
 
 header a:hover {color: #fff; text-decoration: none; }
 
+/*LANDER*/
+
 /*SIGNUP BUTTON*/
 a.signup_button{
-margin-left: auto;
-margin-right:auto;
+z-index:2;
+margin-left: 0px;
+margin-right:0px;
 display:block;
 text-align:center;
-width:190px;
-color:#fff;
-background:#ccc;
-font-size:150%;
-font-weight:bold;
-padding:20px;
+width:100%;
+padding-bottom:10%;
+padding-top:10%;
+margin-top:5px;
+margin-bottom:auto;
+color:#333;
+background:rgba(50, 100, 150, .8);
+
+text-align: center;
+	font-size: 300%; font-style:bold;
+	color: #222;
+	text-shadow: 1px 1px 3px #fff, 1px 1px 70px #fff;
+box-shadow: 5px 5px 20px #666;  /*For IE9/Final CSS3 spec*/
+-moz-box-shadow: 5px 5px 20px #666;  /*For Firefox*/
+-webkit-box-shadow: 5px 5px 20px #666;  /*For Chrome/Safari*/
+}
+
+a.signup_button:hover {
 }
 
 /*FORMS*/
@@ -78,15 +104,30 @@ div.field, div.actions {margin-bottom:10px;}
 -webkit-border-radius: 10px;
 border-radius: 10px;
 }
+.general{
+text-shadow: 1px 1px 2px #333;
+box-shadow: 5px 5px 20px #111;  /*For IE9/Final CSS3 spec*/
+-moz-box-shadow: 5px 5px 20px #111;  /*For Firefox*/
+-webkit-box-shadow: 5px 5px 20px #111;  /*For Chrome/Safari*/
+}
+
+.content{
+	color: #fff;
+	background:rgb(90, 100, 100);
+	margin: 5px;
+	padding: 20px;
+}
+.content a{color:#fff;}
+
 
 /*ERROR MESSAGES*/
-div #error_explainations{ 
+div #error_explaination{ 
 	color:#fff;
 	padding:20px;
-	background:rgb(100, 0, 0);
+	background:rgb(120, 0, 0);
 	margin-bottom:10px;
 	}
-input .field_with_errors{
+ .field_with_errors{
 border-style:solid;
 border-color:rgb(100, 0, 0);
 border-width:3px;
