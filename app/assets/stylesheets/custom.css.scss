@@ -66,43 +66,6 @@ a:hover {color: #222; text-decoration: none; }
 
 header a:hover {color: #fff; text-decoration: none; }
 
-/*LANDER*/
-
-/*SIGNUP BUTTON*/
-.expander{
-margin-left:-20px;
-margin-top: 5px;
-}
-.lander{
-z-index:1;
-position:fixed;
-vertical-align:center;
-left:15%;
-top:-175px;
-padding:20%;
-}
-a.signup_button{
-z-index:2;
-font-size: 250%; font-style:bold;
-color: #222;
-position:fixed;
-padding-top:2%;
-padding-left:10%;
-padding-bottom:40%;
-margin-top:3%;
-margin-bottom:50px;
-width:105%;
-height:100%;
-text-shadow: 1px 1px 3px #fff, 1px 1px 70px #fff;
-
-box-shadow: -5px -5px -20px #666;  /*For IE9/Final CSS3 spec*/
--moz-box-shadow: -5px -5px -20px #666;  /*For Firefox*/
--webkit-box-shadow: -5px -5px -20px #666;  /*For Chrome/Safari*/
-}
-
-a.signup_button:hover {
-}
-
 /*FORMS*/
 div.field, div.actions {margin-bottom:10px;}
 
@@ -142,6 +105,7 @@ border-width:3px;
 }
 /*FLASH MESSAGE STYLES*/
 .success{
+z-index:5;
 color:rgb(0, 100, 0);
 background:rgb(100, 255, 50); 
 margin-top:5px; 
@@ -151,6 +115,7 @@ border-width:3px;
 border-color:rgb(0, 100, 0)
 }
 .error{
+z-index:5;
 color:rgb(100, 0, 0);
 background:rgb(255, 100, 50); 
 margin-top:5px; 
@@ -160,6 +125,7 @@ border-width:3px;
 border-color:rgb(100, 0, 0)
 }
 .notice{
+z-index:5;
 color:rgb(100, 100, 0);
 background:rgb(200, 200, 50); 
 margin-top:5px; 
