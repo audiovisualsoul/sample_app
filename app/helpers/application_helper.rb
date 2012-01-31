@@ -14,5 +14,9 @@ def title
 def logo
 	image_tag("tuneboatlogo.png", :alt => "Tuneboat", :class => "round", :width=>50, :height=>50)
 end
+
+def lander
+	image_tag("lander.png", :alt => "Sign up now!", :width => "600", :height => "600")
+end
 	
 end
