@@ -1,6 +1,23 @@
 /*BASIC STYLES*/
 
-body{font: 12pt Helvetica-neue, sans-serif; color:#666; background:#999;}
+body{font: 12pt Helvetica-neue, sans-serif; color:#666; background:#999;
+
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#999), to(#333));
+  
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #999, #333);
+  
+  /* Firefox 3.6+ */ 
+  background: -moz-radial-gradient(circle, #999, #333);
+  
+  /* IE 10 */ 
+  background: -ms-radial-gradient(circle, #999, #333);
+  
+  /* Opera cannot do radial gradients yet */
+
+}
 h1{font-size: 24pt; color:#333; padding:0px; margin:7px;}
 h2{font-size: 16pt; }
 h3{font-size: 14pt; color:#333;}

@@ -2,26 +2,25 @@
 
 /*SIGNUP BUTTON*/
 .expander{
-margin-left:-20px;
+margin-left:-10px;
 margin-top: 5px;
 }
 .lander{
 z-index:1;
 position:fixed;
 vertical-align:center;
-left:15%;
+left:10%;
 top:-175px;
 padding:20%;
 }
 a.signup_button{
-z-index:2;
+z-index:3;
 font-size: 250%; font-style:bold;
-color: #222;
+color: #174038	;
 position:fixed;
-padding-top:2%;
-padding-left:10%;
+padding-left:5%;
 padding-bottom:40%;
-margin-top:3%;
+margin-top:6%;
 margin-bottom:50px;
 width:105%;
 height:100%;
@@ -30,6 +29,17 @@ text-shadow: 1px 1px 3px #fff, 1px 1px 70px #fff;
 box-shadow: -5px -5px -20px #666;  /*For IE9/Final CSS3 spec*/
 -moz-box-shadow: -5px -5px -20px #666;  /*For Firefox*/
 -webkit-box-shadow: -5px -5px -20px #666;  /*For Chrome/Safari*/
+}
+
+.lander_text{
+margin-top:15%;
+font-size: 130%; font-style:bold;
+color: #333;
+text-shadow: 1px 1px 3px #fff, 1px 1px 70px #fff;
+z-index:2;
+position:fixed;
+padding-bottom:20%;
+padding-left:5%;
 }
 
 a.signup_button:hover {
