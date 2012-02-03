@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
- gem 'mysql2', '~> 0.3.7'
+# gem 'mysql2', '~> 0.3.7'
 
 gem 'gravatar_image_tag', '1.0.0.pre2'
  gem "will_paginate"
@@ -37,7 +37,7 @@ group :test do
 end
 
 group :production do
- # gem 'therubyracer-heroku', '0.8.1.pre3' 
+  gem 'therubyracer-heroku', '0.8.1.pre3' 
   gem 'pg'
 end
 
