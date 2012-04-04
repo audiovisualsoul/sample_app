@@ -1,3 +1,13 @@
+<% if signed_in? %>
+  <div class="profile_container round">
+        <div class="micropost_form general content round">
+        <%= render 'shared/micropost_form' %>
+		 <%= render 'shared/feed' %>
+    	</div>
+  </div>
+
+<% else %>
+
 <div class="lander"><%= link_to lander, signup_path %></div>
 
 <div class="expander"><strong>
@@ -5,3 +15,4 @@
 </div>
 <div class="lander_text"><p><font size="6em"  color="	#344152"><strong>Tuneboat</strong></font><br/>&nbsp; is an online, <font size="5em" ><strong>FREE</strong></font><br/>
 &nbsp; social recording network.</p><p>  <font size="5em" ><strong>Record </strong></font>projects with the <br/>&nbsp; &nbsp click of a button, <br/>&nbsp; <font size="5em" ><strong>Play </strong></font> your tracks all at once,</p> <p>&nbsp;   &nbsp;  <font size="5em" ><strong>Collaborate</strong></font> with musicians <br/>&nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; from all over the world!</p></div>
+<% end %>

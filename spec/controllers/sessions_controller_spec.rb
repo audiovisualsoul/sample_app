@@ -72,6 +72,5 @@ render_views
       		controller.should_not be_signed_in
       		response.should redirect_to(root_path)
 		end
-		
 	end
 end

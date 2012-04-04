@@ -51,5 +51,11 @@ module SampleApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    AWS::S3::Base.establish_connection!(  
+    :access_key_id     => 'Put your Access Key ID here',  
+    :secret_access_key => 'Put your Secret Access Key here'  )  
   end
 end
+
+

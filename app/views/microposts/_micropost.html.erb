@@ -1,6 +1,11 @@
-<div class="micropost general round">
+<div class="micropost round">
   <span><%= micropost.content %></span>
     <span class="timestamp" >
-      <font style="color:#999;"><small>Posted <%= time_ago_in_words(micropost.created_at) %> ago.</small></font>
+<small>&nbsp; Posted <%= time_ago_in_words(micropost.created_at) %> ago.</small>
     </span>
+    
+      <% if current_user.admin? %>
+  | <%= link_to "delete", micropost, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete Micropost" %>
+  <% end %>
 </div>

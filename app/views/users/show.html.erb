@@ -2,9 +2,7 @@
 <div class="profile_container">
 
 <div class="side_column round">
-<p><strong>Name</strong>  <%= @user.name %></strong></p>
-<p><strong>URL</strong>  <%= link_to user_path(@user), user_path(@user) %></p><p>
- <strong>Microposts</strong> <%= @user.microposts.count %></p>
+  <%= render 'shared/user_info' %>
 </div>
 
 <div class="main_column general content round">
@@ -13,6 +11,10 @@
 <div class="user_name"><%= @user.name %></div>
 </h1>
 <div class="profile_body">
+<% if (signed_in?)  && ( is_user_page?)%>
+        <%= render 'shared/micropost_form' %>
+  </div>
+<% end %>
 	<% unless @user.microposts.empty? %>
         <div class="microposts" summary="User microposts">
           <%= render @microposts %>
@@ -21,5 +23,4 @@
       <% end %>
 </div>
 </div>
-
 </div>

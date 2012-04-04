@@ -8,6 +8,11 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 
 gem "sprockets"
 
+gem "carrierwave"
+
+gem 'paperclip'
+gem 'aws-s3', :require => 'aws/s3'  
+
 group :assets do
   gem 'sass-rails' 
   gem 'coffee-rails', "~> 3.1.0"
