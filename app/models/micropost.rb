@@ -4,7 +4,7 @@ class Micropost < ActiveRecord::Base
   belongs_to :user
 
   validates :content, :presence => true, :length => { :maximum => 140 }
-
+	mount_uploader :file, FileUploader
 
   default_scope :order => 'microposts.created_at DESC'
 end
