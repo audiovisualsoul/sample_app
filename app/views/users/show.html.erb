@@ -10,6 +10,7 @@
 <%= gravatar_for(@user)%>
 <div class="user_name"><%= @user.name %></div>
 </h1>
+<div> <%= render 'shared/playall' %> </div>
 <div class="profile_body">
 <% if (signed_in?)  && ( is_user_page?)%>
         <%= render 'shared/micropost_form' %>
