@@ -1,9 +1,14 @@
-<%= form_for @micropost do |f| %>
+<div class="audio_upload_form round">
+<%= form_for @micropost, :html => {:multipart => true} do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-  <div class="field">
-    <%= f.text_area :content %>
+ <div class="field">
+ <%= f.file_field :file %>
+ </div>
+ <div class="field">
+    <%= f.text_area :content, :size=>"30" %>
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
 <% end %>
+</div>

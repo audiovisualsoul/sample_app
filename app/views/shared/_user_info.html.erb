@@ -1,10 +1,13 @@
 <div class="user_info">
+<div class="user_info_name_logo">
   <a href="<%= user_path(current_user) %>">
     <%= gravatar_for current_user, :size => 30 %>
     <div class="user_name">
       <%= current_user.name %>
     </div>
-    <div class="microposts">
+    </div>
+    
+    <div class="info">
       <%= pluralize(current_user.microposts.count, "Posts") %>
     </div>
   </a>

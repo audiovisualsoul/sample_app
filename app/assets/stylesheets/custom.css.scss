@@ -1,21 +1,6 @@
 /*BASIC STYLES*/
 
-body{font: 12pt Helvetica-neue, sans-serif; color:#666; background:#999;
-
-  /* Safari 4-5, Chrome 1-9 */
-  /* Can't specify a percentage size? Laaaaaame. */
-  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#999), to(#333));
-  
-  /* Safari 5.1+, Chrome 10+ */
-  background: -webkit-radial-gradient(circle, #999, #333);
-  
-  /* Firefox 3.6+ */ 
-  background: -moz-radial-gradient(circle, #999, #333);
-  
-  /* IE 10 */ 
-  background: -ms-radial-gradient(circle, #999, #333);
-  
-  /* Opera cannot do radial gradients yet */
+body{font: 13pt Helvetica-neue, sans-serif; color:#666; background:#ccc;
 
 }
 h1{font-size: 24pt; color:#333; padding:0px; margin:7px;}
@@ -24,17 +9,13 @@ h3{font-size: 14pt; color:#333;}
 img{float:left;}
 header{z-index:3;position:relative; height:67px; 
 background:#333; border-color:#999; border-style:solid;
-border-width:thin; width:100%}
+border-width:thin; width:100%;}
 
 /*SITE LAYOUT*/
 
 /*CONTAINER*/
-.container{position:relative; margin-left:0; margin-right:0; width:100%; height:100%; margin-top:0; margin-bottom:0; padding:0px;}
+.container{position:relative; margin-left:auto; margin-right:auto; width:100%; height:100%; margin-top:0; margin-bottom:0; padding:0px;}
 .content_container{position:relative; width:100%; height:100%; padding:0px; margin:0px; }
-
-/*SITE_COLUMNS*/
-.main_column{position:relative; float:left; width:60%; padding:0px; margin-left:0px; margin-right:0px; margin-top: 5px; margin-bottom:5px;}
-.side_column{position:relative; background:#ccc; font-size:10pt; float:left; width:20%; padding:10px; margin-left:0; margin-right:1px; margin-top: 5px; margin-bottom:5px;}
 
 /*FIXED-POSITION CLASSES*/
 /*----------CRAWLER*/
@@ -50,24 +31,10 @@ border-width:thin; width:100%}
 #subtitle{clear:both; font-size:14pt bold; margin-left:60px; margin-bottom:20px;}
 
 /*NAVIGATION*/
-nav{font-size:10pt; color:#999; float:right; padding: 0 0.7em; white-space: nowrap;}
+nav{font-size:12pt; color:#999; float:right; padding: 0 0.7em; white-space: nowrap;}
 nav ul {margin:0; padding:0;}
 nav ul li {list-style-type:none; margin-right:3px; display:inline-block; padding: 0.4em 0;}
 section{padding:5px;}
-
-/*FOOTER*/
-footer{position:fixed;
-z-index:3;
-width:97%;
-padding:0px;
-margin-left:0;
-margin-right:0;
-bottom:-10px;
-text-align:center;
-height:40px; 
-background:#333; border-color:#999; border-style:solid;
-border-width:thin;}
-
 
 /*LINKS*/
 a:link {color: #ccc; text-decoration: none; }
@@ -94,8 +61,9 @@ box-shadow: 5px 5px 20px #111;  /*For IE9/Final CSS3 spec*/
 }
 
 .content{
+width:600px;
 	color: #fff;
-	background:rgb(90, 100, 100);
+	background:rgb(140, 150, 150);
 	margin: 5px;
 	padding: 20px;
 }

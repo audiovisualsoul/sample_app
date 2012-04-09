@@ -1,21 +1,30 @@
-<div class="master round">
-<table>
-<tr>
-<td>
-<%= button_to_function "Play", "playAll();", :class => "masterButton" %>
-</td><td>
-<%= button_to_function "Pause", "pauseAll();", :class => "masterButton" %>
-</td><td>
-<%= button_to_function "Stop", "stopAll();", :class => "masterButton" %>
-</td><td>
-<%= button_to_function "RW", "rw();", :class => "masterButton" %>
-</td><td>
-<%= button_to_function "FF", "ff();", :class => "masterButton" %>
-</td>
-</tr>
-</table>
-<strong>Volume</strong>
-<input type="range" min="0.0" max="1.0" value="0.0" step="0.01" onchange="volumeAll(this.value);" />
+<div class="masterButtons">
 
+<ul class="mastertrans" style="display:inline;">
 
+<li style="display:inline;">
+<%= link_to_function(image_tag("rw.png",:class=>"masterControl"), "rw();")%>
+</li>
+
+<li style="display:inline;">
+<%= link_to_function(image_tag("play.png",:class=>"masterControl"), "playAll();")%>
+</li>
+
+<li style="display:inline;">
+<%= link_to_function(image_tag("pause.png",:class=>"masterControl"), "pauseAll();")%>
+</li>
+
+<li style="display:inline;">
+<%= link_to_function(image_tag("stop.png",:class=>"masterControl"), "stopAll();")%>
+</li>
+
+<li style="display:inline;">
+<%= link_to_function(image_tag("ff.png",:class=>"masterControl"), "ff();")%></li>
+</ul>
+
+<div  class="masterVolume shadow round">
+<table><tr><td>
+<strong>Volume</strong></td><td>
+<input type="range" min="0.0" max="1.0" value="0.0" step="0.01" onchange="volumeAll(this.value);" /></td></tr></table>
+</div>
 </div>

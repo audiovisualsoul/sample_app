@@ -1,15 +1,34 @@
+<script type="text/javascript">
+var audioID_<%= micropost.id.to_s %> = "<%= micropost.id.to_s %>";
+</script>
 <div class="micropost round">
-<div class="audio" style="padding:5px;"><%= audio_tag("http://localhost/tomorrow.mp3", :autoplay => false, :preload => "auto", :controls => true) %></div>
-  <span><%= micropost.content %></span>
-    <div style="padding:5px;"><span class="timestamp" >
-<small>&nbsp; Posted <%= time_ago_in_words(micropost.created_at) %> ago.</small>
-    </span>
+<div>
+<%= audio_tag( micropost.file_url.to_s, :autoplay => false, :preload => "auto", :controls => false, :id=> micropost.id) %>
+</div>
+<div>
+<%= link_to_function(image_tag("rw.png",:class=>"transControl", :height=>30, :width=>25), "rwThis(" + micropost.id.to_s + ")")%>
+<%= link_to_function(image_tag("play.png",:class=>"transControl", :height=>30, :width=>25), "playThis(" + micropost.id.to_s + ")")%>
+<%= link_to_function(image_tag("pause.png",:class=>"transControl", :height=>30, :width=>25), "pauseThis(" + micropost.id.to_s + ")")%>
+<%= link_to_function(image_tag("stop.png",:class=>"transControl", :height=>30, :width=>25), "stopThis(" + micropost.id.to_s + ")")%>
+<%= link_to_function(image_tag("ff.png",:class=>"transControl", :height=>30, :width=>25), "ffThis(" + micropost.id.to_s + ")")%>
+<div  class="masterVolume shadow round">
+<table><tr><td>
+</td><td>Volume
+<input type="range" min="0.0" max="1.0" value="0.0" step="0.01" onchange="volumeThis(audioID_<%= micropost.id.to_s %>,this.value);" /></td></tr></table>
+</div>
+</div>
+<div>
+<span><%= micropost.content %></span>
+    <span class="timestamp" >
+<small>&nbsp; Posted 
+<%= time_ago_in_words(micropost.created_at) %> ago.</small>
+</span>
+</div>
     
     <% if current_user?(micropost.user) %>
   | <%= link_to "delete", micropost, :method => :delete, :confirm => "You sure?",
                                 :title => "Delete Micropost" %>
 <% else%>
   <% end %>
-  
-  </div>
+
 </div>

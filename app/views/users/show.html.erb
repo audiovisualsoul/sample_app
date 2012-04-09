@@ -1,22 +1,13 @@
-
 <div class="profile_container">
 
-<div class="side_column round">
-  <%= render 'shared/user_info' %>
+<div class="project_column round">
+<%= render 'shared/user_info' %>
 </div>
 
-<div class="main_column general content round">
-<div class="profileusername">
-<h1>
-<%= gravatar_for(@user)%>
-<div class="user_name"><%= @user.name %></div>
-</h1>
-</div>
-<div> <%= render 'shared/transport' %> </div>
-<div class="profile_body">
-<% if (signed_in?)  && ( is_user_page?)%>
-        <%= render 'shared/micropost_form' %>
-  </div>
+<div class="main_column round">
+<div class="main_column_body">
+<% if (signed_in?) %>
+	<%= render 'shared/micropost_form' %>
 <% end %>
 	<% unless @user.microposts.empty? %>
         <div class="microposts" summary="User microposts">
