@@ -1,20 +1,25 @@
 <div class="profile_container">
 
-<div class="project_column round">
+<div class="project_column">
 <%= render 'shared/user_info' %>
 </div>
 
-<div class="main_column round">
+<div class="main_column">
 <div class="main_column_body">
-<% if (signed_in?) %>
-	<%= render 'shared/micropost_form' %>
-<% end %>
 	<% unless @user.microposts.empty? %>
         <div class="microposts" summary="User microposts">
           <%= render @microposts %>
         </div>
+        <div class="contentPad">
         <%= will_paginate @microposts %>
+        </div>
       <% end %>
 </div>
+</div>
+<div class="third_column">
+<% if (signed_in?) %>
+	<%= render 'shared/micropost_form' %>
+<% end %>
+
 </div>
 </div>

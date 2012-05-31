@@ -12,7 +12,7 @@ def title
 	end
 	
 def logo
-	image_tag("tuneboatlogo.png", :alt => "Tuneboat", :class => "round", :width=>50, :height=>50)
+	image_tag("tuneboatlogo.png", :alt => "Tuneboat", :class => "round", :width=>80, :height=>80)
 end
 
 def lander

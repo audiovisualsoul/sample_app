@@ -1,5 +1,9 @@
-.micropost{position:relative;  width:100%;  background-color:#333; color:#fff; padding:20px; font-size:12pt; margin-top:5px; margin-bottom: 5px; border-bottom:0px; border-left:0px; border-right:0px;}
+.micropost{width:600px; position:relative; color:#333; padding:0; font-size:12pt; margin-top:0; margin-bottom: 0; border-bottom:0; border-left:0; border-right:0;}
 
-.micropost_form{padding:30px;}
+.micropostPad{padding:10px; margin:10px; }
+
+.microposts{position:relative; margin:0; padding:0;}
+
+.micropost_form{padding:0px;}
 
 .timestamp{font-size:9pt; clear:both; color:#999;}

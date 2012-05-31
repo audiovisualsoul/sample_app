@@ -1,8 +1,14 @@
-<li class="general content round">
-  <%= gravatar_for user, :size => 30 %>
-  <%= link_to user.name, user %>
+<li>
+<div class="contentPad">
+<div class="userLinks" style="color:#333;">
+  <%= gravatar_for user, :size => 40 %>
+  </div>
+  <div class="userLinks" style="margin:5px; font-size:13pt;">
+  <%= link_to user.name, user, :class=>"userLinks" %>
   <% if current_user.admin? %>
   | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
                                 :title => "Delete #{user.name}" %>
   <% end %>
+  </div>
+  </div>
 </li>

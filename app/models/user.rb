@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :description
 
  has_many :microposts, :dependent => :destroy
   
@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 	validates :password, :presence => true,
 										:confirmation => true,
 										:length => { :within => 6..20}
+	validates :description, :length=>{:maximum=>200}
 
 	before_save :encrypt_password
 	

@@ -1,17 +1,16 @@
 /*FOOTER*/
 footer{
-position:fixed;
+position:relative;
+display:inline-block;
 z-index:3;
-width:97%;
+width:1000px;
 height:45px;
-padding:0px;
-margin-left:0;
-margin-right:0;
-bottom:10px;
+padding:0;
+margin:0;
 }
 .footernav{position:relative; float:right;}
 
-footer nav a:link {color: #ccc; text-decoration: none; }
-footer nav a:active {color: #666; text-decoration: none; }
-footer nav a:visited {color: #999; text-decoration: none; }
-footer nav a:hover {color: #fff; text-decoration: none; }
+footer nav a:link {color: #333; text-decoration: none; }
+footer nav a:active {color: #333; text-decoration: none; }
+footer nav a:visited {color: #333; text-decoration: none; }
+footer nav a:hover {color: #666; text-decoration: none; }

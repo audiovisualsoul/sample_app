@@ -2,9 +2,9 @@
 background:rgba(0,0,0,.8);
 position:relative;
 float:left;
-top:-35px;
+margin:0px;
 padding:5px;
-margin:5px;
+margin-top:5px;
 border: .1em;
 }
 .trackTrans{
@@ -19,14 +19,11 @@ left:2px;
 }
 
 .trackVolume{
-color:#fff;
+color:#ccc;
 padding:5px;
 position:relative; 
 float:left; 
-margin-left:10px;
-top:10px;
-
-}
+margin-left:10px;}
 
 .trackControl{
 

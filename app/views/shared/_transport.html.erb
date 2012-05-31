@@ -22,9 +22,11 @@
 <%= link_to_function(image_tag("ff.png",:class=>"masterControl"), "ff();")%></li>
 </ul>
 
-<div  class="masterVolume shadow round">
+<div  class="masterVolume">
 <table><tr><td>
 <strong>Volume</strong></td><td>
 <input type="range" min="0.0" max="1.0" value="0.0" step="0.01" onchange="volumeAll(this.value);" /></td></tr></table>
 </div>
+
+<div class="dockDiv round"></div>
 </div>

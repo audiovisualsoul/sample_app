@@ -1,14 +1,18 @@
-<tr>
-  <td class="gravatar">
-    <%= link_to gravatar_for(feed_item.user), feed_item.user %>
-  </td>
-  <td class="micropost">
+
+<div style="margin:0; height:40px;">
+<div class="contentPad" style="position:relative;">
+<div style="position:relative; top:-30; right:-30;">
+    <%= link_to gravatar_for(feed_item.user, :size =>30), feed_item.user, %>
+</div>
+<div>
     <span class="user">
       <%= link_to feed_item.user.name, feed_item.user %>
     </span>
-    <span class="content"><%= feed_item.content %></span>
+    <span><%= feed_item.content %></span>
     <span class="timestamp">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
     </span>
-  </td>
-</tr>
+    </div>
+
+  </div>
+</div>

@@ -1,14 +1,41 @@
-<div class="audio_upload_form round">
+<div class="audio_upload_form">
+<div class="contentPad">
 <%= form_for @micropost, :html => {:multipart => true} do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
  <div class="field">
  <%= f.file_field :file %>
  </div>
  <div class="field">
-    <%= f.text_area :content, :size=>"30" %>
+    <%= f.text_area :content, :size=>"20" %>
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
+  <%= link_to "Recorder", "http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf"%>
 <% end %>
+</div>
+<div class="tuneboatrecorder">
+<script type="text/javascript">
+var flashvars = {};
+var params = {};
+params.quality = "high";
+params.scale = "noscale";
+params.allowscriptaccess = "always";
+params.base="http://audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder";
+var attributes = {};
+swfobject.embedSWF("http://audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf", "TuneboatRecorder", "200", "400", "8.0.0", "http://audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/expressInstall.swf", flashvars, params, attributes);
+
+</script>
+<object id="TuneboatRecorder" type="application/x-shockwave-flash" width="200" height="400"  data="http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf">
+ <param name="movie" value="http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf"/>
+  <param name="allowScriptAccess" value="sameDomain"/>
+    <param name="flashvars" value="config={
+    loop: false,
+    initialScale: 'fit',
+    videoFile: 'http://www.archive.org/download/oca_2007_movie/openlibrary.flv',
+  }"/>
+
+</object>
+
+</div>
 </div>
