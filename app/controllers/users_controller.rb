@@ -10,9 +10,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(:page => params[:page], :per_page => 5)
+    @projects = @user.projects.paginate(:page => params[:page], :per_page => 10)
     @title = @user.name
-    @micropost = Micropost.new if signed_in?
+    @project = Project.new if signed_in?
   end
 
 	def new

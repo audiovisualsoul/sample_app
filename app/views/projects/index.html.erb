@@ -1,0 +1,14 @@
+<div>
+<div class="contentPad">
+<h2>All Projects</h2>
+<%= will_paginate %>
+
+<ul class="projects">
+  <% @projects.each do |project| %>
+    <%= render project %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+</div>
+</div>

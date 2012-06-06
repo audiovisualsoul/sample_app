@@ -6,19 +6,20 @@
 
 <div class="main_column">
 <div class="main_column_body">
-	<% unless @user.microposts.empty? %>
-        <div class="microposts" summary="User microposts">
-          <%= render @microposts %>
+	<% unless @user.projects.empty? %>
+        <div class="projects" summary="User Projects">
+          <%= render @projects%>
+        <%  @projects.paginate(:page => params[:page], :per_page => 10)%>
         </div>
         <div class="contentPad">
-        <%= will_paginate @microposts %>
+        <%= will_paginate @projects %>
         </div>
       <% end %>
 </div>
 </div>
 <div class="third_column">
 <% if (signed_in?) %>
-	<%= render 'shared/micropost_form' %>
+	<%= render 'shared/project_form', :locals => {:project => @user}  %>
 <% end %>
 
 </div>

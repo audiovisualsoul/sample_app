@@ -13,12 +13,20 @@ module SessionsHelper
 		@current_user = user
 	end
 	
+	def current_project=(project)
+		@current_project = project
+	end
+	
 	def signed_in?
     	!current_user.nil?
   	end
 	
   def current_user
     @current_user ||= user_from_remember_token
+  end
+  
+    def current_project
+    @current_project ||= nil
   end
   
   def authenticate

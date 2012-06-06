@@ -1,0 +1,11 @@
+<li>
+<div class="contentPad">
+  <div class="userLinks" style="margin:5px; font-size:13pt;">
+  <%= link_to project.name, project, :class=>"userLinks" %>
+  <% if current_user.admin? %>
+  | <%= link_to "delete", project, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete Project" %>
+  <% end %>
+  </div>
+  </div>
+</li>

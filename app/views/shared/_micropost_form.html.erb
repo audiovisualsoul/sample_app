@@ -1,6 +1,6 @@
 <div class="audio_upload_form">
 <div class="contentPad">
-<%= form_for @micropost, :html => {:multipart => true} do |f| %>
+<%= form_for ([@project, @micropost]), :html => {:multipart => true} do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
  <div class="field">
  <%= f.file_field :file %>

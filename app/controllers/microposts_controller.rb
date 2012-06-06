@@ -3,10 +3,14 @@ class MicropostsController < ApplicationController
   before_filter :authorized_user, :only => :destroy
   
 def create
-    @micropost = current_user.microposts.build(params[:micropost])
+ @project = Project.find(params[:project_id])
+  @micropost = Micropost.new(params[:micropost])
+  @micropost.project = @project
+  @micropost.user = @project.user
+	
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_path
+      redirect_to @project
     else
       @feed_items = []
       render 'pages/home'
@@ -21,7 +25,7 @@ def create
   private
 
     def authorized_user
-      @micropost = current_user.microposts.find_by_id(params[:id])
+      @micropost = @project.microposts.find_by_id(params[:id])
       redirect_to root_path if @micropost.nil?
     end
 end
