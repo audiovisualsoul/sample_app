@@ -1,6 +1,6 @@
-.micropost{width:600px; position:relative; color:#333; padding:0; font-size:12pt; margin-top:0; margin-bottom: 0; border-bottom:0; border-left:0; border-right:0;}
+.micropost{clear:both; width:580px;position:relative; float:left; border:0px; border-bottom:2px;  border-style:solid; border-color:#333; padding:10px; border-radius:5px;}
 
-.micropostPad{padding:10px; margin:10px; }
+.micropostPad{padding:0px; margin:10px; }
 
 .microposts{position:relative; margin:0; padding:0;}
 

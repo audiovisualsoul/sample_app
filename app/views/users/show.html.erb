@@ -6,9 +6,14 @@
 
 <div class="main_column">
 <div class="main_column_body">
+<div style="padding-left:20px;">
+<h2><%= @user.name %>s Projects</h2>
+</div>
 	<% unless @user.projects.empty? %>
         <div class="projects" summary="User Projects">
+        <ul>
           <%= render @projects%>
+          </ul>
         <%  @projects.paginate(:page => params[:page], :per_page => 10)%>
         </div>
         <div class="contentPad">
@@ -19,7 +24,9 @@
 </div>
 <div class="third_column">
 <% if (signed_in?) %>
+<div class="contentPad"style="text-align:center; vertical-align:center;"><h3><strong>Create</strong><br><small>A New Project:</small></h3>
 	<%= render 'shared/project_form', :locals => {:project => @user}  %>
+	</div>
 <% end %>
 
 </div>

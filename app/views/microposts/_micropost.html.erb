@@ -1,8 +1,10 @@
+<div class="micropost">
+<% if micropost.file_url != nil %>
 <script type="text/javascript">
 var audioID_<%= micropost.id.to_s %> = "<%= micropost.id.to_s %>";
 </script>
-<div class="micropost">
-<div class="micropostPad">
+<strong><%= micropost.user.name %> </strong>posted tune: 
+<%= micropost.content %>
 <div>
 <%= audio_tag( micropost.file_url.to_s, :autoplay => false, :preload => "auto", :controls => false, :id=> micropost.id) %>
 </div>
@@ -12,22 +14,36 @@ var audioID_<%= micropost.id.to_s %> = "<%= micropost.id.to_s %>";
 <%= link_to_function(image_tag("pause.png",:class=>"transControl", :height=>30, :width=>25), "pauseThis(" + micropost.id.to_s + ")")%>
 <%= link_to_function(image_tag("stop.png",:class=>"transControl", :height=>30, :width=>25), "stopThis(" + micropost.id.to_s + ")")%>
 <%= link_to_function(image_tag("ff.png",:class=>"transControl", :height=>30, :width=>25), "ffThis(" + micropost.id.to_s + ")")%>
+</div>
 <div  class="trackVolume">
 Volume
 <input type="range" min="0.0" max="1.0" value="0.0" step="0.01" onchange="volumeThis(audioID_<%= micropost.id.to_s %>,this.value);" />
 </div>
-</div>
-<div style="clear:both;">
-<span><%= micropost.content %></span>
-    <span class="timestamp" >
+<% else %>
+<strong><%= micropost.user.name %> </strong>says: <br>
+<span><%= micropost.content %></span><br>
+<% end %>
+<div style="clear:both; position:relative; float:left;">
 <small>&nbsp; Posted 
 <%= time_ago_in_words(micropost.created_at) %> ago.</small>
-</span>
-</div>
     <% if current_user?(micropost.user) %>
   | <%= link_to "delete", micropost, :method => :delete, :confirm => "You sure?",
                                 :title => "Delete Micropost" %>
 <% else%>
   <% end %>
+  </div>
+
+  <% unless micropost.comments.empty? %>
+  <div style="clear:both; position:relative; float:left;">
+  <%= link_to "See All Comments", micropost, :title => "See all comments" %>
+  </div>
+   <div style="clear:both; position:relative; float:left;">
+        <% @comments = micropost.comments.paginate(:page => params[:page], :per_page => 3)%>
+          <%= render @comments %>
+    </div>
+      <% end %>
+   <div style="clear:both; position:relative; float:left;">
+  <% @commentMicropost = micropost %>
+<%= render 'shared/comment_form', :locals => {:micropost => @commentMicropost} %>
 </div>
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605160639) do
+ActiveRecord::Schema.define(:version => 20120606230839) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20120605160639) do
     t.integer  "project_id"
   end
 
+  add_index "microposts", ["project_id"], :name => "index_microposts_on_project_id"
   add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
 
   create_table "projects", :force => true do |t|

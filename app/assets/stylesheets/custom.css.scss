@@ -30,8 +30,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', end
 /*SITE LAYOUT*/
 
 /*CONTAINER*/
-.container{position:relative; margin-left:auto; margin-right:auto; width:1000px; margin-top:0; margin-bottom:0; padding:0; background-color:#fff;}
-.container_border{width:100%; margin-top:0; margin-bottom:0; margin-left:auto; margin-right:auto; background:#069;};
+.container{position:relative; margin-left:auto; margin-right:auto; width:1000px; margin-top:0; margin-bottom:0; padding:0; background-color:#fff; display:block;}
+.container_border{width:100%; margin-top:0; margin-bottom:0; margin-left:0; margin-right:0;  }
 .content_container{position:relative; width:1000px;  padding:0; margin:0; }
 
 /*FIXED-POSITION CLASSES*/
@@ -139,4 +139,9 @@ border-width:3px;
 border-color:rgb(100, 100, 0)
 }
 
+.inarow{display:inline; float:left; position:relative;}
+
+.postForm{background-color:#999; color:#fff; padding:5px; border-radius:5px; margin:0; margin-top:5px; }
+
+.postForm a:hover{color:red;}
 

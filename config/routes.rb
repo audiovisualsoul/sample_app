@@ -4,10 +4,14 @@ SampleApp::Application.routes.draw do
   end
   resources :sessions,   :only => [:new, :create, :destroy]
   resources :projects do
-  	resources :microposts
+  	resources :microposts 
   end
+   	resources :microposts do
+  		resources :comments
+  	end
+  	resources :comments
 
-  resources :microposts, :only => [:create, :upload, :destroy]
+  resources :microposts, :only => [:create, :upload, :destroy, :show]
   resources :comments, :only => [:create, :destroy]
 	
 	root :to => "pages#home"

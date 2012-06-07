@@ -3,13 +3,18 @@ before_filter :authenticate, :only => [:create, :destroy]
   before_filter :authorized_user, :only => :destroy
   
 def create
-    @comment = current_user.comments.build(params[:comment])
-    if @comment.save
-      flash[:success] = "comment created!"
-      redirect_to root_path
+  @micropost = Micropost.find(params[:micropost_id])
+  @project = @micropost.project
+  @comment = Comment.new(params[:comment])
+  @comment.micropost = @micropost
+  @commentUser = current_user
+	
+if @comment.save
+      #flash[:success] = "comment created!"
+      redirect_to @micropost.project
     else
       @feed_items = []
-      render 'pages/home'
+      render @project
     end
   end
   

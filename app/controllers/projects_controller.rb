@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
     @microposts = @project.microposts.paginate(:page => params[:page], :per_page => 5)
     @title = @project.name
      @micropost = Micropost.new if signed_in?
+     @comment = Comment.new if signed_in?
   end
   
 def create
@@ -20,7 +21,7 @@ def create
   @project.user = @user
   
     if @project.save
-      flash[:success] = "project created!"
+      flash[:success] = "New project created!"
       redirect_to @user
     else
       @feed_items = []

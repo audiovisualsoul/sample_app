@@ -1,41 +1,19 @@
-<div class="audio_upload_form">
-<div class="contentPad">
+<div style="float:right">
+<div class="contentPad" style="text-align:center;">
+<br><strong>Upload</strong> a<br>track to your <br><strong>project</strong><br><br>
 <%= form_for ([@project, @micropost]), :html => {:multipart => true} do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
- <div class="field">
- <%= f.file_field :file %>
- </div>
- <div class="field">
+  <div class="postForm">
+say something:<br><small>( required )</small><br>
     <%= f.text_area :content, :size=>"20" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Submit" %>
-  </div>
-  <%= link_to "Recorder", "http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf"%>
-<% end %>
+<br>
+upload audio:<br><small>( if you want to. )</small><br>
+<%= f.file_field :file %>
+<br><br>
+<%= f.submit "Post to Project!" %>
 </div>
-<div class="tuneboatrecorder">
-<script type="text/javascript">
-var flashvars = {};
-var params = {};
-params.quality = "high";
-params.scale = "noscale";
-params.allowscriptaccess = "always";
-params.base="http://audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder";
-var attributes = {};
-swfobject.embedSWF("http://audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf", "TuneboatRecorder", "200", "400", "8.0.0", "http://audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/expressInstall.swf", flashvars, params, attributes);
-
-</script>
-<object id="TuneboatRecorder" type="application/x-shockwave-flash" width="200" height="400"  data="http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf">
- <param name="movie" value="http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf"/>
-  <param name="allowScriptAccess" value="sameDomain"/>
-    <param name="flashvars" value="config={
-    loop: false,
-    initialScale: 'fit',
-    videoFile: 'http://www.archive.org/download/oca_2007_movie/openlibrary.flv',
-  }"/>
-
-</object>
-
+<% end %>
+<br>OR<div class="postForm"><h1><strong> <%= link_to "Record", "http://www.audiovisualsoul.com/tuneboatrecorder/TuneboatRecorder/TuneboatRecorder.swf"%></strong> </h1></div>a track to your Desktop.<br>
+  
 </div>
 </div>

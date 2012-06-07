@@ -1,0 +1,11 @@
+<div class="commentContainer" style="float:left;position:relative;">
+<%= form_for ([@commentMicropost, @comment]), :html => {:multipart => true} do |comment| %>
+  <%= render 'shared/error_messages', :object => comment.object %>
+ <div>
+    <%= comment.text_area :body, :size=>"30" %>
+  </div>
+  <div>
+    <%= comment.submit "Leave Comment" %>
+  </div>
+<% end %>
+</div>

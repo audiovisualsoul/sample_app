@@ -1,6 +1,6 @@
 <div class="profile_container">
 
-<div class="project_column">
+<div class="project_column" >
 <% @user = @project.user%>
 <% current_project = @project%>
 <%= render 'shared/user_info' %>
@@ -9,7 +9,7 @@
 <div class="main_column">
 <div class="main_column_body">
 	<% unless @project.microposts.empty? %>
-        <div class="microposts" summary="Tracks">
+        <div>
           <%= render @microposts %>
         </div>
         <div class="contentPad">
@@ -18,10 +18,9 @@
       <% end %>
 </div>
 </div>
-<div class="third_column">
+<div class="third_column"
 <% if (signed_in?) %>
 	<%= render 'shared/micropost_form', :locals => {:project => @project} %>
 <% end %>
-
 </div>
 </div>

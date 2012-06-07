@@ -2,14 +2,14 @@
 <div class="contentPad">
 <%= form_for ([current_user, @project]), :html => {:multipart => true} do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
- <div class="field">Name:  
+ <div class="field">Project Name:  
     <%= f.text_area :name, :size=>"20" %>
   </div>
-   <div class="field">Description:    
+   <div class="field">Project Description:    
     <%= f.text_area :description, :size=>"20" %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit" %>
+    <%= f.submit "Create Project" %>
   </div>
 <% end %>
 </div>
